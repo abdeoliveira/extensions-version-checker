@@ -44,9 +44,10 @@ def read_local(string)
 end
 #===============================================
 max = 10
+line_length = 39
 upgradable = 0
 puts 'MAX.VER.'+' '*2+'INSTALLATION'+' '*2+"EXTENSION NAME"
-puts "="*39
+puts "="*line_length
 list_enabled.split("\n").each.with_index do |l,j|
   sleep 1 #DO NOT STRESS REMOTE SERVER
 #----------read local data------------- 
@@ -65,11 +66,11 @@ list_enabled.split("\n").each.with_index do |l,j|
   end
 end
 #==================================
-puts '='*39
+puts '='*line_length
 puts 'CURRENT SHELL VERSION: ' + current_shell_ver
 puts 'ENABLED EXTENSIONS: ' + num_enabled_extensions.to_s
 puts 'UPGRADABLE EXTENSIONS: ' + upgradable.to_s
 if upgradable == num_enabled_extensions 
-  puts '-'*44
+  puts '-'*line_length
   puts "It seems all your ENABLED extensions are compatible with a newer Gnome Shell!" 
 end
